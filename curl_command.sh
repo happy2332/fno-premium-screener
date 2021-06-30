@@ -1,0 +1,13 @@
+curl 'https://www.nseindia.com/api/option-chain-equities?symbol=RELIANCE' \
+  -H 'authority: www.nseindia.com' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' \
+  -H 'accept: */*' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://www.nseindia.com/option-chain' \
+  -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+  -H 'cookie: _ga=GA1.2.2087680878.1599456529; nsit=QVNIZq5BBX2llYKwPIbS0HGd; AKA_A2=A; _gid=GA1.2.497191672.1625021798; ak_bmsc=460169745B5EEE8E03C0004E9359C1EF~000000000000000000000000000000~YAAQMyEPF3j/glh6AQAAM9rYWgwb3XvK8uTxatK5Rv3QJXHf7AWPL5CZmxBuJzlqhXwRPk6aJJew52F90VqQmneq81idRlJ6MVkk02JkVA4EUz8thctHb4Z5DUzsiPo+AfexApoF2YnbF9+iYV6+y/33VUJOO6PK5bXhOd3kJ1SJi2DIeFjAGehvEDH0dIDURSChkQs2Ki61+AaEiE9itN1g0KbHkH4j68oSOKKDEHrvp5FvMALRlZowTXer3wkPUxwsykRflCx0WlY+g1FUgfRciqaZKuB4yaEv12bABgtq1TMmsWCqJI2LolQcC2YG/P4KIGhaxQtu13G6NdseJXe6J1opeIOecHz++tAEnINZF4qKFTfEyCcPczh0/tX+bzhHSiI43mktm6lbJiTvAmsGEbaRYHCmPy8tfLdjwV78nHM3dUtCK+KgORWflrlH6tZStr6ivMA35i+9HUERl6qemwQOgDm0sLoJjXxtmrxlfW9/ncBAIQihgSc=; nseQuoteSymbols=[{"symbol":"RELIANCE","identifier":null,"type":"equity"}]; nseappid=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkubnNlIiwiYXVkIjoiYXBpLm5zZSIsImlhdCI6MTYyNTAyMTg2MCwiZXhwIjoxNjI1MDI1NDYwfQ.9vhn9jIApI3zPQedhAxoyR7Kpvwi1vmiE4OucfHwjUk; _gat_UA-143761337-1=1; RT="z=1&dm=nseindia.com&si=f1d1c1fb-5749-474e-ab4f-83f90ecae420&ss=kqiw0qvk&sl=6&tt=8er&bcn=%2F%2F684fc539.akstat.io%2F&ld=1shm"; bm_sv=AE497C219D7E2907B79E8B582CC993BD~JK41Dfzme8jIeIj+WHD/cj7vvSAGcfc+eIPP5+dn+4OoFGv0hrzv/E/OMwMypOvQbDKj0/FZ6gX9D4q/aaMatSBXI+wFu06mg8aeVdcArlQgOmYG58a6hHo+Hps3tXQ95iCAfsDiG2vmrWbLNdo1p8QKeYU1jvWIHJhD0DppIeE=' \
+  --compressed
