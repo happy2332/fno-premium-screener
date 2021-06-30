@@ -74,22 +74,22 @@ def main():
 	for symbolname in fno_stocks[:10]:
 	    symbolname = symbolname.upper()
 	    st.write(symbolname)
-	    option_chain_json = curl_nse_fetch(symbolname)
-	    if 'filtered' not in option_chain_json:
-	    	continue
-	    data = option_chain_json['filtered']['data']
-	    atm_strike = get_atm_strike_from_data(data)
-	#     print(atm_strike)
-	    lot_size = nse_get_fno_lot_sizes(symbolname)
-	    month_low,month_high = get_30_days_low_high(symbolname)
-	    underlying_value = get_underlying_from_data(data)
-	    pe_price,ce_price = get_pe_ce_price_from_data(data, atm_strike)
-	    percent_premium = (pe_price+ce_price)/underlying_value*100
-	    result_list.append([symbolname,underlying_value,lot_size,month_low,month_high,atm_strike,pe_price,ce_price, percent_premium])
-	result_df = pd.DataFrame(result_list)
-	result_df.columns = ['symbolname', 'underlyingValue','lot_size','month_low','month_high', 'atm_strike', 'pe_price','ce_price','percent_premium']
-	result_df = result_df.sort_values('percent_premium',ascending=False).reset_index(drop=True)
-	st.table(result_df)
+	#     option_chain_json = curl_nse_fetch(symbolname)
+	#     if 'filtered' not in option_chain_json:
+	#     	continue
+	#     data = option_chain_json['filtered']['data']
+	#     atm_strike = get_atm_strike_from_data(data)
+	# #     print(atm_strike)
+	#     lot_size = nse_get_fno_lot_sizes(symbolname)
+	#     month_low,month_high = get_30_days_low_high(symbolname)
+	#     underlying_value = get_underlying_from_data(data)
+	#     pe_price,ce_price = get_pe_ce_price_from_data(data, atm_strike)
+	#     percent_premium = (pe_price+ce_price)/underlying_value*100
+	#     result_list.append([symbolname,underlying_value,lot_size,month_low,month_high,atm_strike,pe_price,ce_price, percent_premium])
+	# result_df = pd.DataFrame(result_list)
+	# result_df.columns = ['symbolname', 'underlyingValue','lot_size','month_low','month_high', 'atm_strike', 'pe_price','ce_price','percent_premium']
+	# result_df = result_df.sort_values('percent_premium',ascending=False).reset_index(drop=True)
+	# st.table(result_df)
 
 if __name__ == "__main__":
     main()
