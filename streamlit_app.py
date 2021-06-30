@@ -73,6 +73,7 @@ def main():
 	result_list = []
 	for symbolname in fno_stocks[:10]:
 	    symbolname = symbolname.upper()
+	    st.write(symbolname)
 	    option_chain_json = curl_nse_fetch(symbolname)
 	    if 'filtered' not in option_chain_json:
 	    	continue
